@@ -4089,6 +4089,12 @@ if !exists('g:ctrlp_buftag_ctags_bin') && exists('g:Local_ctags_bin')
     let g:ctrlp_buftag_ctags_bin = g:Local_ctags_bin
 endif
 
+" Add support for non-default languages supported by `ctags`.
+let g:ctrlp_buftag_types = {
+        \ 'rst'      : '--language-force=restructuredtext',
+        \ 'md'       : '--language-force=markdown',
+        \ }
+
 " Directory mode for launching ':CtrlP' with no directory argument:
 "   0 - Don't manage the working directory (Vim's CWD will be used).
 "       Same as ':CtrlP $PWD'.

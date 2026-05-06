@@ -7,6 +7,14 @@ Significant changes to vimfiles (newest changes first).
 Changes marked with "BREAKING CHANGE" indicate an incompatible change that may
 require adjustment of per-user settings.
 
+2026-05-06
+==========
+
+- Extend the CtrlP plugin configuration to support buffer tags for
+  reStructuredText and Markdown filetypes.  Now ``<Ctrl-P> t``  (or
+  ``:CtrlPBufTag``) and ``<Ctrl-P> T`` (or ``:CtrlPBufTagAll``) will work for
+  these filetypes.
+
 2026-04-05
 ==========
 
