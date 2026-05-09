@@ -2929,7 +2929,7 @@ Setting up cpsm                                         *notes_cpsm_setup*
 
 See cpsm/README.md for additional optional settings.
 
-Version 2021-07-25 (814961a) from:
+Version 2026-02-09 (c32a9b7) from:
 https://github.com/nixprime/cpsm
 
 Installation:
