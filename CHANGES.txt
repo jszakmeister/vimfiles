@@ -7,6 +7,45 @@ Significant changes to vimfiles (newest changes first).
 Changes marked with "BREAKING CHANGE" indicate an incompatible change that may
 require adjustment of per-user settings.
 
+2026-07-11
+==========
+
+- Fix Markdown syntax highlighting of code blocks for 3 or more levels of
+  bullet.
+
+  Previously, Markdown highlighting behaved like this::
+
+    - First level worked.
+
+      - Second level worked.
+
+        - Third level appeared to be a code block (since it's indented at least
+          four spaces on an absolute scale); but it should be considered a
+          bullet instead because it's not four spaces indented relative to the
+          previous (second) bullet.
+
+  Now, it works correctly::
+
+    - First level works.
+
+      - Second level works.
+
+        - Third level works.
+
+          - And so on...
+
+              And this is a code block (four spaces indendation from the nearest
+              bullet).
+
+  As with the reStructuredText fix (which provided the ``:RstLiteralBlockFix``
+  command to disable/enable the fix), the Markdown fix is enabled by default but
+  may be disabled via::
+
+    :MdCodeBlockFix on          " Enable fix.
+    :MdCodeBlockFix off         " Disable fix.
+
+  See ``:help notes_markdown`` for more information.
+
 2026-05-09
 ==========
 

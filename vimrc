@@ -6641,6 +6641,7 @@ function! DisableMarkdownSyntaxCodeList()
 endfunction
 
 call DisableMarkdownSyntaxCodeList()
+runtime scripts/mdcodeblockfix.vim
 
 function! SetupMarkdownSyntax()
     call DisableMarkdownSyntaxCodeList()
@@ -6669,6 +6670,8 @@ function! SetupMarkdownSyntax()
                 \ lang . '\>.*$" end="^\s*```\ze\s*$" keepend ' .
                 \ 'contains=@' . synGroup
     endfor
+    " Enable fix for code block highlighting.
+    MdCodeBlockFix on
 endfunction
 command! -bar SetupMarkdownSyntax call SetupMarkdownSyntax()
 

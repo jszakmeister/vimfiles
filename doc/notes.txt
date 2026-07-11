@@ -3835,6 +3835,14 @@ Local Customizations:
   https://spec.commonmark.org/0.30/#emphasis-and-strong-emphasis), but to retain
   the original highlighting anyway, set g:LocalAllowMarkdownError to 1.
 
+Also, Vimfiles has scripts/mdcodeblockfix.vim supplying a command to toggle
+a fix for code block syntax highlighting:
+>
+  :MdCodeBlockFix on          " Enable fix.
+  :MdCodeBlockFix off         " Disable fix.
+<
+The fix is enabled by default; see SetupMarkdownSyntax() in vimrc.
+
 Installation:
 - Follow bundle installation instructions (|bundle_installation|).
 
